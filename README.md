@@ -104,18 +104,18 @@ task-manager/
 ```
 
 
-## 📸 ![Task-Manger](image-3.png)
+## 📸 ![Task-Manger](./screenshots/image-3.png)
 
 ### Dashboard
 
-![DashBoard](image.png)
+![DashBoard](./screenshots/image.png)
 
 ### Tasks
 
-![Task](image-1.png)
+![Task](./screenshots/image-2.pngimage-1.png)
 
 ### Analytics
-![Analytics](image-2.png)
+![Analytics](./screenshots/image-2.pngimage-2.png)
 
 ## ⚙️ Installation
 
