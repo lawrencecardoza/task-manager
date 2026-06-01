@@ -112,7 +112,7 @@ task-manager/
 
 ### Tasks
 
-![Task](./screenshots/image-2.png)
+![Task](./screenshots/image-1.png)
 
 ### Analytics
 ![Analytics](./screenshots/image-2.png)
