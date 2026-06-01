@@ -120,7 +120,7 @@ task-manager/
 ## ⚙️ Installation
 
 ```bash
-git clone <https://github.com/lawrencecardoza/task-manager.git>
+git clone https://github.com/lawrencecardoza/task-manager.git
 cd task-manager
 
 # Client
