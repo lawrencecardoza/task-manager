@@ -112,10 +112,10 @@ task-manager/
 
 ### Tasks
 
-![Task](./screenshots/image-2.pngimage-1.png)
+![Task](./screenshots/image-2.png)
 
 ### Analytics
-![Analytics](./screenshots/image-2.pngimage-2.png)
+![Analytics](./screenshots/image-2.png)
 
 ## ⚙️ Installation
 
