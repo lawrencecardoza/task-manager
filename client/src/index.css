@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Notion-AI Editorial Light Theme */
+  --bg-main: #ffffff;
+  --bg-secondary: #f7f7f5;
+  --bg-sidebar: #fbfbfa;
+  --bg-card: #ffffff;
+  --bg-hover: #efefee;
+
+  --text-primary: #191919;
+  --text-secondary: #6b6b6b;
+  --text-muted: #9b9b9b;
+  --text-inverse: #ffffff;
+
+  --border: #e9e9e7;
+  --border-focus: #dfdfde;
+
+  --accent-black: #111111;
+  --accent-blue: #0b6bff;
+  --accent-purple: #7c5cfc;
+  --accent-green: #14ae5c;
+  --accent-red: #e5484d;
+  --accent-yellow: #f5b301;
+
+  --ai-gradient: linear-gradient(135deg, #7c5cfc, #0b6bff);
+  --ai-accent: #7c5cfc;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --radius: 12px;
+  --toast-bg: #111111;
+  --toast-text: #ffffff;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg-main: #111111;
+  --bg-secondary: #202020;
+  --bg-sidebar: #171717;
+  --bg-card: #1a1a1a;
+  --bg-hover: #272727;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #c7c7c7;
+  --text-muted: #888888;
+  --text-inverse: #111111;
+
+  --border: #2e2e2e;
+  --border-focus: #4a4a4a;
+
+  --accent-black: #f5f5f5;
+  --accent-blue: #5b9bff;
+  --accent-purple: #a78bfa;
+  --accent-green: #4ade80;
+  --accent-red: #fb7185;
+  --accent-yellow: #facc15;
+
+  --ai-gradient: linear-gradient(135deg, #a78bfa, #5b9bff);
+  --ai-accent: #a78bfa;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.32);
+  --toast-bg: #202020;
+  --toast-text: #f5f5f5;
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Notion-like minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cececd;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
+/* Full Page Login UI */
+.login-full-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+}
+
+.login-content {
+  text-align: center;
+}
+
+.login-header-brand h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.login-form-editorial {
+  margin-top: 48px;
+  text-align: left;
+}
+
+.form-group-editorial {
+  margin-bottom: 24px;
+}
+
+.form-group-editorial label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon > svg {
+  position: absolute;
+  left: 16px;
+  color: var(--text-muted);
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 14px 16px 14px 48px !important;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: var(--bg-secondary);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-with-icon input:focus {
+  background: var(--bg-card);
+  border-color: var(--accent-black);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
+}
+
+.btn-primary-login {
+  width: 100%;
+  background: var(--accent-black);
+  color: var(--text-inverse);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.login-error-pill {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  border: 1px solid #fecaca;
+}
+
+.login-divider {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.text-link-editorial {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.login-footer-minimal {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.login-footer-minimal a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.logo-square.large {
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
